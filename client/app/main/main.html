@@ -1,7 +1,7 @@
 <!--Header-->
 <header>
   <div class="container">
-    <div class="row Topheader">
+    <div class="row">
       <div class="Infoheader text-left col-xs-12 col-sm-6">
         <p class="Phone">
           <i class="fa fa-phone"></i>
@@ -27,6 +27,7 @@
         </p>
       </div>
     </div>
+
     <div class="row">
       <p class="col-md-4 col-sm-8" style="font-size:25px">Superfamiliar Droguerias</p>
       <div class="col-md-5 col-xs-9">
@@ -54,18 +55,33 @@
       </div>
     </div>
   </div>
+
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 Imagen-main img-responsive">
+
+          <div style="position: absolute;
+                    bottom: 20px;
+                    right: 30px;">
+               
+            <p class="hidden-xs hidden-sm Texto" style="font-size:25px">Superfamiliar Droguerias</p>
+            <div class="text-right">
+              <img class="Imagen-family " src="assets/images/1.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 </header>
-<!--END Header-->
+<!--End Header-->
 
 <!--Section B-->
 <section>
   <div class="container">
     <div class="row">
-      <div class="text-center">
-        <i class="fa fa-heart animated infinite pulse"></i>
-        <p class="Section-title">Productos</p>
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3" ng-repeat="item in vm.articles track by $index">
+      <div class="col-xs-12 col-sm-6 col-lg-4" ng-repeat="item in vm.articles track by $index">
         <div class="thumbnail">
           <img class="img-thumbnail top" src="{{item.imageUrl}}" alt="" />
           <div class="caption">
@@ -79,22 +95,6 @@
     </div>
   </div>
 </section>
-<!--END Section B-->
+<!--Section B-->
 
-<!--Section D-->
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="text-center">
-        <i class="fa fa-heart animated infinite pulse"></i>
-        <p class="Section-title">¿Por que comprar en SuperFamiliar?</p>
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3" ng-repeat="item in vm.emotions track by $index">
-        <div class="thumbnail">
-          <img class="img-thumbnail top" src="{{item.imageUrl}}" alt="" />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--END Section D-->
+
