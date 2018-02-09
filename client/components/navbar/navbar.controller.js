@@ -34,14 +34,15 @@ class NavbarController {
     this.mostrar = false;
     this.$scope = $scope;
     this.valor = "Inicial";
-    this.item1();
+    this.positions = [false, false, false, false, false, false];
+    /*this.item1();
     this.item2();
     this.item3();
     this.item4();
     this.item5();
-    this.item6();
+    this.item6();*/
   }
-  item1(){
+  /*item1(){
     $(".menuItem1").hover(
       () => {
         this.mostrar = true;
@@ -129,6 +130,18 @@ class NavbarController {
         this.valor = "";
         this.$scope.$apply();
       });
+  }*/
+
+  pasoMouse(numberItem, position){
+    console.log('paso el mouse');this.mostrar = true;
+    this.valor = "MegaMenu Producto " + numberItem;
+    this.positions[position]= true;
+  }
+
+  quitoMouse(){
+    this.positions = [false, false, false, false, false, false];
+    this.mostrar = false;
+    this.valor = "";
   }
 }
 
