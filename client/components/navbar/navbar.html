@@ -1,37 +1,74 @@
 <div class="navbar navbar-default navbar-static-top" ng-controller="NavbarController">
   <div class="container">
     <div class="navbar-header">
-      <button class="navbar-toggle" type="button" ng-click="nav.isCollapsed = !nav.isCollapsed">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+
     </div>
-    <div uib-collapse="nav.isCollapsed" class="navbar-collapse collapse text-center">
+    <div class="text-center">
       <ul class="nav navbar-nav col-lg-12 col-md-12">
-        <li  ui-sref-active="active" class="col-lg-2 col-md-2 menuItem1" id = "menuItem">
+        <li  ui-sref-active="active" class="col-lg-2 col-md-2 col-sm-12 menuItem1" id = "menuItem" ng-mouseover = "vm.pasoMouse('Medicamentos', 0)" ng-mouseleave = "vm.quitoMouse()">
             <a ui-sref="{{vm.menu[0].state}}">{{vm.menu[0].title}}</a>
         </li>
-        <li  ui-sref-active="active" class="col-lg-2 col-md-2 menuItem2"  id = "menuItem">
+        <div  ng-if = "vm.positions[0]" class="hidden-lg hidden-md">
+          <p style="font-weight: bold;">{{vm.valor}}</p>
+          <p>-opcion 1</p>
+          <p>-opcion 2</p>
+          <p>-opcion 3</p>
+          <p>-opcion 4</p>
+        </div>
+        <li  ui-sref-active="active" class="col-lg-2 col-md-2  col-sm-12 menuItem2"  id = "menuItem" ng-mouseover = "vm.pasoMouse('Cuidado capilar', 1)" ng-mouseleave = "vm.quitoMouse()">
             <a ui-sref="{{vm.menu[1].state}}">{{vm.menu[1].title}}</a>
         </li>
-        <li  ui-sref-active="active" class="col-lg-2 col-md-2 menuItem3" data-toggle="dropdown" id = "menuItem">
+        <div  ng-if = "vm.positions[1]" class="hidden-lg hidden-md">
+          <p style="font-weight: bold;">{{vm.valor}}</p>
+          <p>-opcion 1</p>
+          <p>-opcion 2</p>
+          <p>-opcion 3</p>
+          <p>-opcion 4</p>
+        </div>
+        <li  ui-sref-active="active" class="col-lg-2 col-md-2 col-sm-12 menuItem3" data-toggle="dropdown" id = "menuItem" ng-mouseover = "vm.pasoMouse('Bebe', 2)" ng-mouseleave = "vm.quitoMouse()">
             <a ui-sref="{{vm.menu[2].state}}">{{vm.menu[2].title}}</a>
         </li>
-        <li  ui-sref-active="active" class="col-lg-2 col-md-2 menuItem4" data-toggle="dropdown" >
+        <div ng-if = "vm.positions[2]" class="hidden-lg hidden-md">
+          <p style="font-weight: bold;">{{vm.valor}}</p>
+          <p>-opcion 1</p>
+          <p>-opcion 2</p>
+          <p>-opcion 3</p>
+          <p>-opcion 4</p>
+        </div>
+        <li  ui-sref-active="active" class="col-lg-2 col-md-2 col-sm-12 menuItem4" data-toggle="dropdown" ng-mouseover = "vm.pasoMouse('Personal', 3)" ng-mouseleave = "vm.quitoMouse()">
             <a ui-sref="{{vm.menu[3].state}}">{{vm.menu[3].title}}</a>
         </li>
-        <li  ui-sref-active="active" class="col-lg-1 col-md-1 menuItem5" data-toggle="dropdown" >
+        <div ng-if = "vm.positions[3]" class="hidden-lg hidden-md">
+          <p style="font-weight: bold;">{{vm.valor}}</p>
+          <p>-opcion 1</p>
+          <p>-opcion 2</p>
+          <p>-opcion 3</p>
+          <p>-opcion 4</p>
+        </div>
+        <li  ui-sref-active="active" class="col-lg-1 col-md-1 col-sm-12 menuItem5" data-toggle="dropdown" ng-mouseover = "vm.pasoMouse('5', 4)" ng-mouseleave = "vm.quitoMouse()">
             <a ui-sref="{{vm.menu[4].state}}">{{vm.menu[4].title}}</a>
         </li>
-        <li  ui-sref-active="active" class="col-lg-2 col-md-2 menuItem6" data-toggle="dropdown menuItem" >
+        <div  ng-if = "vm.positions[4]" class="hidden-lg hidden-md">
+          <p style="font-weight: bold;">{{vm.valor}}</p>
+          <p>-opcion 1</p>
+          <p>-opcion 2</p>
+          <p>-opcion 3</p>
+          <p>-opcion 4</p>
+        </div>
+        <li  ui-sref-active="active" class="col-lg-2 col-md-2 col-sm-12 menuItem6" data-toggle="dropdown menuItem" ng-mouseover = "vm.pasoMouse('Oral', 5)" ng-mouseleave = "vm.quitoMouse()">
             <a ui-sref="{{vm.menu[5].state}}">{{vm.menu[5].title}}</a>
         </li>
+        <div  ng-if = "vm.positions[5]" class="hidden-lg hidden-md">
+          <p style="font-weight: bold;">{{vm.valor}}</p>
+          <p>-opcion 1</p>
+          <p>-opcion 2</p>
+          <p>-opcion 3</p>
+          <p>-opcion 4</p>
+        </div>
       </ul>
 
     </div>
-    <div class="col-lg-12 megaMenu" ng-if = "vm.mostrar">
+    <div class="col-lg-12 megaMenu hidden-sm hidden-xs" ng-if = "vm.mostrar">
       <div class="panel panel-default col-lg-5 col-lg-offset-3" style="margin-top:20px;">
           <div class="panel-heading" >
             <div class="col-lg-6" >
