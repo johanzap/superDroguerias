@@ -1,18 +1,78 @@
-<header class="hero-unit" id="banner">
+<!--Header-->
+<header>
   <div class="container">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
-  </div>
-</header>
-
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in $ctrl.awesomeThings">
-        <li><a href="#" uib-tooltip="{{thing.info}}">{{thing.name}}</a></li>
-      </ul>
+    <div class="row">
+      <div class="Infoheader text-left col-xs-12 col-sm-6">
+        <p class="Phone">
+          <i class="fa fa-phone"></i>
+           Telefono: 555 6545
+        </p>
+        <p class="Separator hidden-xs">
+          |
+        </p>
+        <p class="Phone">
+          <i class="fa fa-phone"></i>
+          Telefono: 555 6547
+        </p>
+      </div>
+      <div class="Infoheader text-right col-xs-12 col-sm-6">
+        <p class="Sellpoint">
+          <i class="fa fa-map-marker"></i>
+           Puntos de venta
+        </p>
+        <p class="Networks">
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-instagram"></i>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <p class="col-md-4 col-sm-8" style="font-size:25px">Superfamiliar Droguerias</p>
+      <div class="col-md-5 col-xs-9">
+        <div class="input-group">
+          <input type="button" name="name" value="" class="form-control">
+          <span class="input-group-btn">
+            <button type="button" name="button" class="btn">
+              <i class="fa fa-search"></i>
+            </button>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-3 visible-md visible-lg text-center">
+        <p class="Discount">
+          Super 10%
+        </p>
+        <p class="Discount">
+          Jueves de descuento
+        </p>
+      </div>
+      <div class="col-sm-3 visible-sm visible-xs text-center">
+        <p class="lead">
+          Precio Capsula
+        </p>
+      </div>
     </div>
   </div>
-</div>
+</header>
+<!--End Header-->
+
+<!--Section B-->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-lg-4" ng-repeat="item in vm.articles track by $index">
+        <div class="thumbnail">
+          <img class="img-thumbnail top" src="{{item.imageUrl}}" alt="" />
+          <div class="caption">
+            <h4>{{item.price | currency:$:0}}</h4>
+            <p>{{item.name}}</p>
+            <p>{{item.description}}</p>
+            <p>{{item.laboratory}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Section B-->
