@@ -4,22 +4,97 @@
 
 class MainController {
 
-  constructor($http) {
-    this.$http = $http;
-    this.awesomeThings = [];
-  }
-
-  $onInit() {
-    this.$http.get('/api/things').then(response => {
-      this.awesomeThings = response.data;
-    });
+  constructor() {
+    this.articles=[{
+        imageUrl:"assets/images/medicamento.jpg",
+        name:"Producto 1",
+        description:"Lorem ipsum tatra la la",
+        price:100000,
+        laboratory:"Germa66.ltda"
+      },
+      {
+        imageUrl:"assets/images/medicamento.jpg",
+        name:"Producto 1",
+        description:"Lorem ipsum tatra la la",
+        price:100000,
+        laboratory:"Germa66.ltda"
+      },
+      {
+        imageUrl:"assets/images/medicamento.jpg",
+        name:"Producto 1",
+        description:"Lorem ipsum tatra la la",
+        price:100000,
+        laboratory:"Germa66.ltda"
+      },
+      {
+        imageUrl:"assets/images/medicamento.jpg",
+        name:"Producto 1",
+        description:"Lorem ipsum tatra la la",
+        price:100000,
+        laboratory:"Germa66.ltda"
+      },
+      {
+        imageUrl:"assets/images/medicamento.jpg",
+        name:"Producto 1",
+        description:"Lorem ipsum tatra la la",
+        price:100000,
+        laboratory:"Germa66.ltda"
+      },
+      {
+        imageUrl:"assets/images/medicamento.jpg",
+        name:"Producto 1",
+        description:"Lorem ipsum tatra la la",
+        price:100000,
+        laboratory:"Germa66.ltda"
+      },
+      {
+        imageiption:"Lorem ipsum tatra la la",
+        price:100000,
+        laboratory:"Germa66.ltda"
+      },
+      {
+        imageUrl:"assets/images/medicamento.jpg",
+        name:"Producto 1",
+        description:"Lorem ipsum tatra la la",
+        price:100000,
+        laboratory:"Germa66.ltda"
+      },
+      {
+        imageUrl:"assets/images/medicamento.jpg",
+        name:"Producto 1",
+        description:"Lorem ipsum tatra la la",
+        price:100000,
+        laboratory:"Germa66.ltda"
+      },
+      {
+        imageUrl:"assets/images/medicamento.jpg",
+        name:"Producto 1",
+        description:"Lorem ipsum tatra la la",
+        price:100000,
+        laboratory:"Germa66.ltda"
+      },
+      {
+        imageUrl:"assets/images/medicamento.jpg",
+        name:"Producto 1",
+        description:"Lorem ipsum tatra la la",
+        price:100000,
+        laboratory:"Germa66.ltda"
+      },
+      {
+        imageUrl:"assets/images/medicamento.jpg",
+        name:"Producto 1",
+        description:"Lorem ipsum tatra la la",
+        price:100000,
+        laboratory:"Germa66.ltda"
+      }];
   }
 }
 
 angular.module('superDrogueriasApp')
   .component('main', {
     templateUrl: 'app/main/main.html',
-    controller: MainController
+    controller: MainController,
+    controllerAs:"vm"
   });
 
 })();
